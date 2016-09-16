@@ -6,8 +6,14 @@
         .module('elma')
         .factory('loginService', loginService);
 
-    function loginService() {
+    loginService.$inject = ['$resource'];
 
-        
+    function loginService($resource) {
+
+        var url = "http://demo.elma-bpm.com/API/REST/Authorization/LoginWith";
+
+        return $resource(url, {username: '@username'}, {
+            'auth': {method: 'POST'}
+        });
     }
 })();

@@ -12,6 +12,18 @@
         
         var vm = this;
 
-        console.log(this);
+        vm.username = '',
+        vm.passw = '',
+        vm.sendAuth = sendAuth;
+
+        function sendAuth() {
+            
+            var user = loginService.auth({username: vm.username});
+            user.$promise.then(function(r) {
+                console.log(r);
+            }, function(r) {
+                console.log(r);
+            });
+        }
     }
 })();

@@ -3,5 +3,5 @@
 (function() {
 
   angular
-    .module('elma', ['ui.router']);
+    .module('elma', ['ui.router', 'ngResource']);
 })();

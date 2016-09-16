@@ -5,8 +5,16 @@
     angular
         .module('elma')
         .config(configure);
+    
+    // configure.$inject = ['$httpProvider'];
 
-    function configure($stateProvider, $urlRouterProvider) {
+    function configure($stateProvider, $urlRouterProvider, $httpProvider) {
+
+        $httpProvider.defaults.headers.common = {};
+        $httpProvider.defaults.headers.post = {};
+        $httpProvider.defaults.headers.put = {};
+        $httpProvider.defaults.headers.patch = {};
+
 
         $urlRouterProvider.otherwise('login');
 

@@ -17,6 +17,9 @@ form {
             height: 30px;
             width: 100%;
             display: block;
+            &:focus {
+                outline: 1px solid darken($c-border, 7%);
+            }
         }
     }
 }

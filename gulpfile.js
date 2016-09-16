@@ -22,7 +22,7 @@ gulp.task('template', function () {
 });
 
 gulp.task('styles', function () {
-    return gulp.src('./app/**/*.scss')
+    return gulp.src(['./app/styles/*.scss', './app/**/*.scss'])
         .pipe(changed('./public/css'))
         .pipe(sass())
         .on('error', notify.onError())

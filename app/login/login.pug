@@ -1,10 +1,12 @@
 .login-form
     h2 Форма логина:
-    form(name="login" id="login-form")
+    form(name="login_form" id="login-form" ng-submit="login.sendAuth()")
         fieldset
             div
                 label(for="username") Логин:
-                input(type="text" name="username" id="username")
+                input(type="text" name="username" id="username" ng-model="login.username")
             div
                 label(for="passw") Пароль:
-                input(type="password" name="passw" id="passw")
+                input(type="password" name="passw" id="passw" ng-model="login.passw")
+            div
+                input(type="submit" value="Войти").btn

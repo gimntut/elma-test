@@ -1,0 +1,14 @@
+.btn {
+  border: none;
+  background: $c-blue;
+  color: $c-white;
+  height: 30px;
+  line-height: 30px;
+  max-width: 220px;
+  display: inline-block;
+  padding: 0 20px;
+  cursor: pointer;
+  &:hover {
+    background: darken($c-blue, 7%);
+  }
+}
