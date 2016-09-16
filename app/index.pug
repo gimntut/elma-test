@@ -6,10 +6,15 @@ head
   link(rel="stylesheet", href="css/main.css")
 body(ng-app="elma")
   .wrapper
-    
+    div(ui-view)
 
   block scripts
     script(src="./bower_components/angular/angular.min.js")
     script(src="./bower_components/angular-ui-router/release/angular-ui-router.min.js")
 
     script(src="./app.js")
+    script(src="./app.routes.js")
+
+    script(src="./login/login.service.js")
+    script(src="./login/login.controller.js")
+    //- script(src="./login/login.component.js")

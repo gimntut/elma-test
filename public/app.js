@@ -1,6 +1,6 @@
 'use strict';
 
-;(function() {
+(function() {
 
   angular
     .module('elma', ['ui.router']);
