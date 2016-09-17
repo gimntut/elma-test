@@ -18,10 +18,8 @@
         vm.sendAuth = sendAuth;
 
         function sendAuth() {
-            
-            console.log(this);
 
-            var user = loginService.auth(JSON.stringify(vm.formData));
+            var user = loginService.auth({username: vm.formData.username});
             user.$promise.then(function(r) {
                 console.log(r);
             }, function(r) {

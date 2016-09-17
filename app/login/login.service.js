@@ -12,7 +12,7 @@
 
         var url = "http://bpm-demo.elma-bpm.ru/API/REST/Authorization/LoginWith";
 
-        return $resource(url, {}, {
+        return $resource(url, {username: '@username'}, {
             'auth': {
                 method: 'POST'
             }
