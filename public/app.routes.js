@@ -5,8 +5,6 @@
     angular
         .module('elma')
         .config(configure);
-    
-    // configure.$inject = ['$httpProvider'];
 
     function configure($stateProvider, $urlRouterProvider, $httpProvider) {
 
@@ -14,6 +12,8 @@
         $httpProvider.defaults.headers.post = {};
         $httpProvider.defaults.headers.put = {};
         $httpProvider.defaults.headers.patch = {};
+        
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
 
 
         $urlRouterProvider.otherwise('login');

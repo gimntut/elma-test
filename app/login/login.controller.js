@@ -12,13 +12,16 @@
         
         var vm = this;
 
-        vm.username = '',
-        vm.passw = '',
+        vm.formData = {};
+        vm.formData.username = '',
+        vm.formData.passw = '',
         vm.sendAuth = sendAuth;
 
         function sendAuth() {
             
-            var user = loginService.auth({username: vm.username});
+            console.log(this);
+
+            var user = loginService.auth(JSON.stringify(vm.formData));
             user.$promise.then(function(r) {
                 console.log(r);
             }, function(r) {
