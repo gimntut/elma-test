@@ -10,7 +10,7 @@
 
     function loginService($resource) {
 
-        var url = "http://bpm-demo.elma-bpm.ru/API/REST/Authorization/LoginWith";
+        var url = "http://demo.elma-bpm.com/API/REST/Authorization/LoginWith";
 
         return $resource(url, {username: '@username'}, {
             'auth': {

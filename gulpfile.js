@@ -61,7 +61,8 @@ gulp.task('server', function () {
             routes: {
               '/bower_components': 'bower_components'
           },
-        }
+        },
+        port: 7000
     });
 
     gulp.watch('./public/**/*.*').on('change', browserSync.reload)
