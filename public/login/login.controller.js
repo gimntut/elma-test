@@ -13,13 +13,13 @@
         var vm = this;
 
         vm.formData = {};
-        vm.formData.username = '',
+        vm.formData.usr = '',
         vm.formData.passw = '',
         vm.sendAuth = sendAuth;
 
         function sendAuth() {
 
-            var user = loginService.auth({username: vm.formData.username});
+            var user = loginService.auth({username: vm.formData.usr});
             user.$promise.then(function(r) {
                 console.log(r);
             }, function(r) {
